@@ -41,10 +41,10 @@ jobs:
       - name: Build docs
         working-directory: docs
         run: mkdocs build
-        
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./docs/site
-          force_orphan: true
+          path: './docs/site' 
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
