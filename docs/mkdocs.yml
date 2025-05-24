@@ -1,0 +1,48 @@
+site_name: DashScope 的 LangGraph
+theme: 
+  name: material
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;'
+  - autorefs
+  - tags
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+  - mkdocstrings:
+      custom_templates: templates
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
+            - https://python.langchain.com/api_reference/objects.inv
+          options:
+            preload_modules:
+              - langchain
+              - langchain_core
+            enable_inventory: true
+            members_order: source
+            allow_inspection: true
+            heading_level: 2
+            show_bases: true
+            show_source: false 
+            summary: true
+            inherited_members: true
+            selection:
+              docstring_style: google
+            docstring_section_style: table
+            show_root_toc_entry: false
+            show_signature: true
+            show_signature_annotations: true
+            separate_signature: true
+            line_length: 60
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+            options:
+              filters:
+                - "!^_"
+nav:
+  - Examples:
+    - Agentic RAG: tutorials/rag/langgraph_agentic_rag.ipynb
