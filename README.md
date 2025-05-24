@@ -1,6 +1,6 @@
 
 # **使用 DashScope 的 LangGraph**  
-[![GitHub Stars](https://img.shields.io/github/stars/611de/HelloLangGraph?style=social)](https://github.com/611de/HelloLangGraph) [![License](https://img.shields.io/github/license/611de/HelloLangGraph)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/611de/DashGraph?style=social)](https://github.com/611de/DashGraph) [![License](https://img.shields.io/github/license/611de/DashGraph)](LICENSE)
 
 
 ## **简介**  
@@ -35,8 +35,8 @@
 ### **1. 环境准备**  
 ```bash
 # 克隆仓库
-git clone https://github.com/611de/HelloLangGraph.git
-cd HelloLangGraph
+git clone https://github.com/611de/DashGraph.git
+cd DashGraph
 
 # 创建虚拟环境（推荐）
 python -m venv venv
